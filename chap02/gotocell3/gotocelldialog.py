@@ -17,6 +17,7 @@ class GoToCellDialog(QDialog, Ui_GoToCellDialog):
 
         self.buttonBox.accepted.connect(self.accept)
         self.buttonBox.rejected.connect(self.reject)
+        self.lineEdit.textChanged[str].connect(self.on_lineEdit_textChanged)
 
     @pyqtSlot()
     def on_lineEdit_textChanged(self):
